@@ -1,0 +1,34 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZOD_EMPLOYEE_MSC_SRV" xml:lang="de">
+            <EntityType Name="ZTT_EMPLOYEE_MSC" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Carrier"/>
+                    <PropertyRef Name="IdEmployee"/>
+                </Key>
+                <Property Name="Carrier" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Fluggesellschaft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IdEmployee" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ID employee" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Firstname" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="FIRSTNAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lastname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="LASTNAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Department" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="department" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Area" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Salary" Type="Edm.Decimal" Nullable="false" Precision="11" Scale="11" sap:unit="Currency" sap:label="salary" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Zahl.Währung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityContainer Name="ZOD_EMPLOYEE_MSC_SRV_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="ZTT_EMPLOYEE_MSCSet" EntityType="ZOD_EMPLOYEE_MSC_SRV.ZTT_EMPLOYEE_MSC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <FunctionImport Name="EmployeesSalaryPerDay" ReturnType="Collection(ZOD_EMPLOYEE_MSC_SRV.ZTT_EMPLOYEE_MSC)" EntitySet="ZTT_EMPLOYEE_MSCSet" m:HttpMethod="GET">
+                    <Parameter Name="DaysPerMonth" Type="Edm.Decimal" Mode="In" Precision="0" Scale="0"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZOD_EMPLOYEE_MSC_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZOD_EMPLOYEE_MSC_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

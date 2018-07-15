@@ -1,0 +1,37 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" controllerName="test_MasterDetailTable.controller.Detail">
+	
+	<Page id="detailPage" title="{i18n>detailViewTitle}" showNavButton="true" navButtonPress="onNavToMaster" class="sapUiResponsiveContentPadding">
+		<content>
+			
+				    <form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="detailForm">
+				        <form:content>
+				            <core:Title text="{i18n>employeeDetail}" id="__title0"/>
+				            <Label text="{/#ZTT_EMPLOYEE_MSC/Carrier/@sap:label}" id="__label10"/>
+				            <Input width="100%" id="__input0" value="{Carrier}" required="true"/>
+				            <Label text="{/#ZTT_EMPLOYEE_MSC/IdEmployee/@sap:label}" id="__label11"/>
+				            <Input width="100%" id="__input1" value="{IdEmployee}" maxLength="10" required="true"/>
+				            <Label text="{/#ZTT_EMPLOYEE_MSC/Firstname/@sap:label}" id="__label12"/>
+				            <Input width="100%" id="__input2" value="{Firstname}"/>
+				            <Label text="{/#ZTT_EMPLOYEE_MSC/Lastname/@sap:label}" id="__label13"/>
+				            <Input width="100%" id="__input3" value="{Lastname}"/>
+				            <Label text="{/#ZTT_EMPLOYEE_MSC/Department/@sap:label}" id="__label14"/>
+				            <Input width="100%" id="__input4" value="{Department}"/>
+				            <Label text="{/#ZTT_EMPLOYEE_MSC/Area/@sap:label}" id="__label15"/>
+				            <Input width="100%" id="__input5" value="{Area}"/>
+				            <Label text="{/#ZTT_EMPLOYEE_MSC/Salary/@sap:label}" id="__label16"/>
+				            <Input width="100%" id="__input6" value="{Salary}"/>
+				            <Label text="{/#ZTT_EMPLOYEE_MSC/Currency/@sap:label}" id="__label17"/>
+				            <Input width="100%" id="__input7" value="{Currency}"/>
+				        </form:content>
+				    </form:SimpleForm>
+				    <Toolbar width="100%" id="__toolbar1">
+		                <content>
+		                    <Button text="{i18n>createButtonText}" id="__button0" icon="sap-icon://create" press="onEmployeeCreate"/>
+		                    <Button text="{i18n>updateButtonText}" id="__button1" icon="sap-icon://save" press="onEmployeeUpdate"/>
+		                    <Button text="{i18n>deleteButtonText}" id="__button2" icon="sap-icon://delete" press="onEmployeeDelete"/>
+		                </content>
+		            </Toolbar>
+		            
+		</content>
+	</Page>
+</mvc:View>

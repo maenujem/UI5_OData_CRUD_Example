@@ -1,0 +1,75 @@
+<mvc:View 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns="sap.m" 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	controllerName="test_MasterDetailTable.controller.Master" 
+	displayBlock="true">
+
+			<Page title="{i18n>masterViewTitle}">
+				<content>
+					<Button text="NavToDetail Test" class="sapUiTinyMarginEnd" press="onNavToDetail"/>
+
+				    <Table noDataText="Drop column list items here and columns in the area above" id="listTable" items="{/ZTT_EMPLOYEE_MSCSet}" mode="SingleSelectMaster" headerText="{i18n>employeeList}" selectionChange="onNavToDetail">
+				        <items>
+				            <ColumnListItem id="__item0">
+				                <cells>
+				                    <Text text="{Carrier}" id="__text0"/>
+				                    <Text text="{IdEmployee}" id="__text1"/>
+				                    <Text text="{Firstname}" id="__text2"/>
+				                    <Text text="{Lastname}" id="__text3"/>
+				                    <Text text="{Department}" id="__text4"/>
+				                    <Text text="{Area}" id="__text5"/>
+				                    <Text text="{Salary}" id="__text6"/>
+				                    <Text text="{Currency}" id="__text7"/>
+				                </cells>
+				            </ColumnListItem>
+				          </items>
+				        <columns>
+				            <Column id="__column0">
+				                <header>
+				                    <Label text="{/#ZTT_EMPLOYEE_MSC/Carrier/@sap:label}" id="__label0"/>
+				                </header>
+				            </Column>
+				            <Column id="__column1">
+				                <header>
+				                    <Label text="{/#ZTT_EMPLOYEE_MSC/IdEmployee/@sap:label}" id="__label1"/>
+				                </header>
+				            </Column>
+				            <Column id="__column2">
+				                <header>
+				                    <Label text="{/#ZTT_EMPLOYEE_MSC/Firstname/@sap:label}" id="__label2"/>
+				                </header>
+				            </Column>
+				            <Column id="__column3">
+				                <header>
+				                    <Label text="{/#ZTT_EMPLOYEE_MSC/Lastname/@sap:label}" id="__label3"/>
+				                </header>
+				            </Column>
+				            <Column id="__column4">
+				                <header>
+				                    <Label text="{/#ZTT_EMPLOYEE_MSC/Department/@sap:label}" id="__label4"/>
+				                </header>
+				            </Column>
+				            <Column id="__column5">
+				                <header>
+				                    <Label text="{/#ZTT_EMPLOYEE_MSC/Area/@sap:label}" id="__label5"/>
+				                </header>
+				            </Column>
+				            <Column id="__column6">
+				                <header>
+				                    <Label text="{/#ZTT_EMPLOYEE_MSC/Salary/@sap:label}" id="__label6"/>
+				                </header>
+				            </Column>
+				            <Column id="__colum7">
+				                <header>
+				                    <Label text="{/#ZTT_EMPLOYEE_MSC/Currency/@sap:label}" id="__label7"/>
+				                </header>
+				            </Column>
+				         </columns>
+				     </Table>
+
+				</content>
+			</Page>
+
+</mvc:View>
