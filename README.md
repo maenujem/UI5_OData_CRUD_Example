@@ -1,4 +1,4 @@
-SAP: ABAP OData Service & UI5 CRUD App
+SAP: ABAP OData Service & UI5 CRUD App Example
 ====
 
 Welcome to a simple tutorial series about creating an SAP OData Service in ABAP and consuming its CRUD functionality with a UI5 Master-Detail app.

@@ -1,0 +1,11 @@
+#ServiceDestination
+Description=Northwind OData Service
+Type=HTTP
+TrustAll=true
+Authentication=NoAuthentication
+Name=Northwind
+ProxyType=Internet
+URL=http\://services.odata.org\:80
+WebIDEUsage=odata_gen
+WebIDESystem=Northwind
+WebIDEEnabled=true

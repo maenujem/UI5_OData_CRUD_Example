@@ -1,0 +1,12 @@
+#ServiceDestination
+Description=XXX
+Type=HTTP
+TrustAll=true
+Authentication=NoAuthentication
+Name=XXX
+ProxyType=Internet
+URL=http\://xxx.xxx.xxx.xxx\:xxxx
+WebIDEUsage=odata_abap,dev_abap,ui5_execute_abap,bsp_execute_abap
+WebIDESystem=XXX
+WebIDEEnabled=true
+sap-client=xxx
