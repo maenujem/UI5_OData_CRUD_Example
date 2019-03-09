@@ -21,8 +21,8 @@ sap.ui.define([
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
 
-            // create the views based on the url/hash
-            this.getRouter().initialize();
+		        // create the views based on the url/hash
+		        this.getRouter().initialize();
             
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
@@ -33,10 +33,11 @@ sap.ui.define([
 			// 	useBatch: false,
 			// 	defaultBindingMode: "TwoWay"
 			// });
+			//
 			// this.setModel(oModel, "employees");
-			var oModel = this.getModel("employees");
-			oModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
-			oModel.setUseBatch(false);
+			// var oModel = this.getModel("employees");
+			// oModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
+			// oModel.setUseBatch(false);
 			
 		}
 	});

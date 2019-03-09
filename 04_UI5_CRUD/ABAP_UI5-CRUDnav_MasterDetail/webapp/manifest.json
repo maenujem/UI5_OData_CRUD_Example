@@ -72,9 +72,15 @@
 					"bundleName": "test_MasterDetailTable.i18n.i18n"
 				}
 			},
-        	"employees": {
-        		"dataSource": "ZOD_EMPLOYEE_MSC_SRV"
-	    	}
+			"employees": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultBindingMode": "TwoWay",
+					"useBatch" : false
+				},
+				"dataSource": "ZOD_EMPLOYEE_MSC_SRV",
+				"preload": true
+			}
 		},
 		"resources": {
 			"css": [
