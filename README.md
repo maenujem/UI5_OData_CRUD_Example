@@ -9,6 +9,7 @@ In this tutorial series you will..
 * [03] ..get to know SAP/open UI5 () and implement a Hello World Example
 * [04] ..access your OData-Service [01] and display the data using master-table and detail-form. In the detail form xou can also create, update, delete the current record.
 
+The tutorial is contained in the *PDF document in the corresponding directory*. There may also be additional informations and files.
 
 The series cover the following topics:
 - create OData-Service from DDIC and implement CRUD with ABAP
